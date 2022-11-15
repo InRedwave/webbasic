@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+			*{
+				/* (* 모든 경계선 태그를 다 그리겠다. ))경계선을 검은색 실선 ipx로 */
+				border: 1px solid black
+			}
+			table, th, td {
+				border-collapse: collapse;
+			}
+			
+		</style>
+		
+		
+	</head>
+	<body>
+		<h4>Block and InLine Element</h4>
+		<hr/>
+		
+		
+		<!-- Block Element-->
+		<!-- p, div, h3는 줄바뀌면서 출력됨. -->
+		<!-- 경계선 : border -->
+		<p>내용1</p>
+		<p>내용2</p>
+		
+		<p>
+			<div>내용3</div>
+			<div>내용4</div>
+		</p>
+		
+		<p>
+		
+			<!-- //////////////////////// -->
+			<!-- div는 block, button은 inline -->
+			<table width="100%">
+				<tr>
+					<td>
+						<div>내용5</div>
+						<button>버튼</button>
+						<button>버튼</button>
+					</td>
+					<td>
+						<div>내용6</div>
+						<button>버튼</button>
+						<button>버튼</button>
+					</td>
+				</tr>
+			</table>
+		
+		</p>
+		
+		<!-- //////////////////////// -->
+		
+		<!-- InLine Element-->
+		<p>
+			<span>내용1</span>
+			<span>내용2</span>
+			<a href="">링크1</a>
+			<a href="">링크2</a>
+			
+			<button>버튼1</button>
+			<button>버튼2</button>
+		</p>
+		
+		
+	</body>
+</html>

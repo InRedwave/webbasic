@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+			table, th, td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+		</style>
+	</head>
+	<body>
+	<!-- table 부모 element = body -->
+	<!-- 100% : body의 폭 전체를 차지하게 해라. -->
+	
+		<h4>게시물 목록</h4>
+		<!-- 가로줄 --> 
+		<hr/>
+		
+		<table width="100%">
+			<tr>
+				<th>번호</th>			
+				<th>제목</th>			
+				<th>내용</th>			
+				<th>글쓴이</th>			
+				<th>날짜</th>			
+			</tr>
+			<tr>
+				<td style="text-align: center;">1번</td>
+				<td>초겨울</td>
+				<td>날씨가 추워집니다.</td>
+				<td>홍길동</td>
+				<td>2022.11.15</td>
+			</tr>
+			<tr>
+				<td style="text-align: center;">2번</td>
+				<td>웹 프로그래밍</td>
+				<td>웹은 이제 기본 개발자의 능력입니다.</td>
+				<td>박개발</td>
+				<td>2022.11.15</td>
+			</tr>
+			<tr>
+				<!-- 5개를 병합해서 column 1개로 만든다 -->
+				<td colspan="5" style="text-align: center;">[맨앞][이전] 1 2 3 4 5 [다음][맨끝]</td>
+				
+			
+			</tr>
+			
+		</table>
+		
+	
+		
+		
+		
+	</body>
+</html>
