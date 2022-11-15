@@ -1,4 +1,4 @@
-
+package util;
 import lombok.Data;
 
 @Data
