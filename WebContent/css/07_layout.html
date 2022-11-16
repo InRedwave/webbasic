@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;		
+			}
+			#header{
+				border : 1px solid black;
+				height : 100px;
+				margin-bottom: 10px;
+			}
+			
+			#content1{
+				/* margin-top: 10px; */
+				/* 높이 지정 안하면 contnent1의 높이(innerDiv) + padding */
+				
+				/* padding 순서 시계방향으로 맞춰주는것이 중요함. */
+				border : 1px solid red;
+				padding-top : 30px;
+				padding-right: 50px;
+				padding-left: 50px;
+				padding-bottom: 10px;
+				height : 100px;
+			/* 	빨간색 박스의 높이가 100으로 고정됨. */
+			 	box-sizing: border-box;
+			}
+			
+			#content1 .innerDiv{
+				background-color: green;
+				height: 100px;
+				
+				
+			}
+			
+			#content2 {
+				border : 1px solid red;
+				/* 1개인 경우 4방향 전부 적용 */
+				margin: 50px;
+								
+			}		
+			
+			#content2 .innerDiv{
+				/* 4개인 경우 top, right, left, bottom */
+				/* margin: 50px 50px 50px 50px; */
+				
+				/* top/bottom // left/right */
+				/* margin: 50px 10px; */
+				
+				/* 상, 하 는 50px, auto이면 L/R 양쪽 공간을 똑같이 쓴다. */
+				margin : 50px auto;
+				
+				background-color: orange;
+			}
+			
+			#footer {
+				border : 1px solid blue;
+				width : 500px;
+				height: 300px;
+				
+			}	
+			
+			#footer .innerDiv{
+				background-color: #ff00ff;
+				width : 50%;
+				height : 50%;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+	
+		<div id="header">this is Header</div>
+		
+		
+		<div id="content1">
+			<div class="innerDiv">this is content1</div>
+		</div>
+		
+		
+		
+		<div id="content2">
+			<div class="innerDiv">this is content2</div>
+		</div>
+		
+		
+		<div id="footer">
+			<div class="innerDiv">this is footer</div>
+		</div>
+		
+		
+				
+	</body>
+</html>

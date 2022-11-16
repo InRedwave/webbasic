@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+			*{
+				margin: 0px;
+				padding : 0px;
+			}
+			#wrapper{
+				width : 1000px;
+				margin : 0px auto;
+			}
+			
+			#header{
+				border: 1px solid black;
+				height : 50px;
+			}
+			
+			.sidebar{
+				border: 1px solid red;			
+				width : 300px;
+				height : 200px;
+				float: left;
+			/* 	box-sizing: border-box;
+				
+			}
+			.content{
+				border: 1px solid blue;			
+				width : 700px;
+				height : 200px;
+				float : left;
+				box-sizing: border-box;
+				
+			}
+			#footer{
+				border : 1px solid black;
+				/* float 후, 좌 우 여백 제거하려는 경우 사용.			 */
+				clear: both;
+			
+			}
+			
+		
+		</style>
+		
+		
+	</head>
+	<body>
+		<div id="wrapper">
+		
+		
+			<div id="header">this is Header</div>
+			
+			
+			<div id="center">
+				<div class="sidebar">this is side bar</div>
+				
+				<div class="content">this is content</div>
+				<!-- content는 block 요소이므로 전체 행 차지함. (글자처럼 자동으로 올라가지 않음.) -->
+				
+				
+			</div>
+		
+			<div id="footer">this is footer</div>
+			
+			
+		</div>	
+	</body>
+</html>

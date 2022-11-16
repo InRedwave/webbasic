@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+			/* 좁은 범위의 선택이 우선권 */
+			/* 전체 red 적용 후 blue 적용 */
+			
+			/* 모두 */
+			* {color: red;}
+			
+			/* id가 topHeader 인 것 */
+			#topHeader {color: blue;}
+			
+			
+			/* class가 subtitle인 것들 */
+			 .subtitle{color: orange;}
+		
+			/* class이름이 동일하면 같은 종류의 태그이다. */
+			/* subtitle과 textContent를 모두 가지고 있는 것 */
+			.subtitle.textContent{color: green;}
+			
+			/* 부모가 menu인 item 클래스 */
+			/* menu 아래에 있는 모든 것 */
+			 .menu .item {color: purple;}
+			
+			/* p tag아래의 item 클래스 모두 (가능) */
+			p .item
+			
+			/*id가 메뉴 아래의 item 클래스들.(가능) */
+			#menu .item
+			
+			
+			/* 부모 menu 바로 아래만 선택, 더 밑은 제외시킨다. */
+			/* menu 바로 아래에 있는 것 */
+			.menu>.item {color: purple;}
+			
+			
+		</style>
+		
+	</head>
+	<body>
+		<!-- * > .class 같은 종류 > #topHeader 한 종류 -->
+		<!-- #topHeader : id가 최종적으로 적용된다 -->
+		<h4 id="topHeader" class="subtitle">CSS selector</h4>
+		<hr/>
+		
+		<!-- Class : 여러 개의 그룹 가질 수 있음. -->
+		<h6 class="subtitle textContent">글자 영역</h6>
+		<p>this is a paragraph</p>
+		<div>this is a content</div>
+		
+		
+		<h5 class="subtitle">메뉴 영역</h5>
+		
+		<p class="menu">
+			<a class="item" href="">link1</a>
+			<a class="item" href="">link2</a>
+			<a class="item" href="">link3</a>
+			
+			<span>
+				<a class="item" href="">link4</a>
+			
+			</span>
+			
+			
+			
+			
+		</p>
+		
+		<a class="item" href="">link</a>
+		
+		
+		<h3 class="subtitle">양식 영역</h3>
+		
+		<form>
+			<label for="userId">User Id</label>
+			<input id="userId" type="text"/>
+			
+		</form>
+		
+		
+	</body>
+</html>
