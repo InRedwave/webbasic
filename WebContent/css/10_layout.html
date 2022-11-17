@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+			#flex-container1, #flex-container3 {
+				display: flex;
+				background-color: blue;
+				margin: 20px;
+				justify-content: center;
+			}
+			
+			
+		
+			.item{
+				width: 50px;
+				height : 50px;
+				margin: 10px;
+				/* 2개 red, 2개 green 2개 blue */
+				background-color: #ffffff;
+			}
+			
+			
+			#flex-container2{
+				display: flex;
+				flex-direction : column;
+				background-color: blue;
+				margin: 20px;
+				/* column인 경우 align-item 사용 */
+				align-items: center;
+				
+			}
+		
+		</style>
+		
+		
+		
+		
+	</head>
+	<body>
+		<h4>flex box model</h4>
+		<hr/>
+		
+		<div id = "flex-container1"> 
+			<div class = "item"></div>
+			<div class = "item"></div>
+			<div class = "item"></div>
+					
+		</div>
+		
+		<div id = "flex-container2"> 
+			<div class = "item"></div>
+			<div class = "item"></div>
+			<div class = "item"></div>
+					
+		</div>
+		
+		<div id = "flex-container3"> 
+			<!-- flex-grow 들어가면 원래 width 성질 없어짐 -->
+			<!-- flex-grow없으면 기존 width 가지고 나머지 두개가 1/2, 1/2 -->
+			<!-- 하나만 가지면 나머지 공간 flex-grow 가진 item이 다 차지함. -->
+			<div class = "item" ></div>
+			<div class = "item" ></div>
+			<div class = "item" style = "flex-grow: 1"></div>
+		</div>
+		
+		<div id = "flex-container3"> 
+			<!-- flex-grow 들어가면 원래 width 성질 없어짐 -->
+			<!-- flex-grow없으면 기존 width 가지고 나머지 두개가 1/2, 1/2 -->
+			<!-- 하나만 가지면 나머지 공간 flex-grow 가진 item이 다 차지함. -->
+			<div class = "item" style = "flex-grow: 2"></div>
+			<div class = "item" style = "flex-grow: 3"></div>
+			<div class = "item" style = "flex-grow: 5"></div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
