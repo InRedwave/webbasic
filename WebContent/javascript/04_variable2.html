@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		
+		
+		<script>
+			//HTML 문서 전역 변수 선언
+			var x1;
+			if(true) {
+				var x1=10;
+				
+			}
+			console.log("x1:" + x1);	
+			
+			/* var로 선언된 변수는 블록 바깥에서 사용할 수 있다. */
+			if(true){
+				//HTML 문서 전역 변수 선언
+				var x2=10;
+			}
+			/* 함수가 아니면 바깥 사용 가능 */
+			console.log("x2:" + x2);		
+			
+			/* let으로 선언한 변수는 해당 블록 안에서만 사용할 수 있다. */
+			if( true ){
+				let x3 = 10;
+			}
+			/* console.log("x3:" + x3); */
+	
+			
+			
+			//함수 선언
+			function funName1(){
+			//함수 내부의 변수는 함수 전체에서 사용할 수 있다. 함수를 벗어나서는 사용할 수 없다.
+				console.log("실행");
+				
+			if( true ) {
+				//로컬 변수 선언 
+				var x4 = 10;
+				console.log("x4:" + x4);
+				let x5=10;
+				//HTML문서 전역 변수 선언
+				x6 = 20; //var 또는 let이 생략된 변수는 HTML 문서 전역 특성을 가진다.
+				
+			}
+			console.log("x4:" + x4);
+			/* console.log("x5:" + x4); */
+			console.log("x6:" + x6);
+		}
+		/* console.log("x4:" + x4); */
+			
+		
+		function funName2(){
+			
+			console.log("x1:" + x1);
+			console.log("x2:" + x2);
+			console.log("x6:" + x6);
+		}
+		</script>
+		
+	</head>
+	<body>
+		<!-- //함수 호출 -->
+		
+		<button onclick="funName1()" class="btn btn-success"> funName1()호출</button>
+		
+		<button onclick="funName2()" class="btn btn-success"> funName2()호출</button>
+		
+		
+	</body>
+</html>

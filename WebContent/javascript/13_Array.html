@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<script>
+			var arr1 = [10, 20, 30];
+			//index 반복
+			/* 
+			for(let i = 0; i < arr1.length; i++){
+				console.log(arr1[i]);
+			}
+			 */
+			//향상된 for 문과 유사함. for(int x : arry){}
+			 /* 
+			for(let value of arr1){
+				console.log(value);
+			}
+			 */
+			// in arr1이 index를 return하므로 i로 주고, arry에 넣음
+			/* 
+			for(let i in arr1){
+				console.log(arr1[i]);
+			}
+			//항목값을 반복
+			for(let value of arr1){
+				console.log(value);
+			}
+			 */
+			 
+			//함수 처리 반복 (v에는 값이 들어온다)
+			arr1.forEach( function(v) {console.log(v)});
+			//람다식 arrow로 바꾼 경우
+			arr1.forEach(v => console.log(v));
+			
+			
+			
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		
+		
+		
+		
+	</body>
+</html>

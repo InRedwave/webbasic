@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<script>
+			//if--------------------------------------------------------------------
+			let x = 10;
+			if(x < 10) {
+				console.log("10보다 작음");
+			} else {
+				console.log("10이거나 큼");				
+			}
+			let y = null;
+			let z = -1;
+			//if(y == null) {
+			//null은 false 로 간주한다. 부정의 의미가 크기 때문
+			//y(0) 부정 false로 간주함. -> 0만 부정의 의미임.
+			//선언만 한 경우도 부정의 의미를 가진다. (위의 3가지 주의)
+			let var1; 
+				
+			if(var1){
+				console.log("긍정의 의미");
+			} else {
+				console.log("부정의 의미");
+			}
+			
+			//switch--------------------------------------------------------------------
+			//똑같음
+			let grade ="A";
+			switch (grade) {
+				case "A" :
+					console.log("우수고객");
+					break;
+				case "B" :
+					console.log("일반고객");
+					break;
+				default : 
+					console.log("구경꾼");
+			}
+			
+			
+			
+			//for--------------------------------------------------------------------
+			//똑같음
+			let sum = 0;
+			for(let i=0; i<=100; i++ ) {
+				sum += i;				
+			}
+			console.log("sum1 : "+sum);
+			
+			
+			
+			//while--------------------------------------------------------------------
+			//똑같음
+			let i = 0;
+			sum = 0;
+			while (i <= 100 ){
+				sum += i;
+				i++;
+			}
+			console.log("sum2 : " + sum);
+			
+				
+			//break--------------------------------------------------------------------
+			
+			i = 0;
+			sum = 0;
+			while (true ){
+				sum += i;
+				i++;
+				if(i > 100) {
+					break;
+				}
+			}
+			console.log("sum3 : " + sum);
+			
+			
+			
+			//continue--------------------------------------------------------------------
+			sum = 0;
+			co : for(let i=0; i<=100; i++ ) {
+				
+			if( i%2 !== 0){
+					continue co;
+				}
+				sum += i;		
+			}
+			console.log("sum4 : "+sum);
+			
+			
+			
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		
+		
+		
+		
+	</body>
+</html>
