@@ -16,9 +16,11 @@
 				var x1=10;
 				
 			}
+			/* var로 선언된 변수는 블록 바깥에서 사용할 수 있다. */
 			console.log("x1:" + x1);	
 			
-			/* var로 선언된 변수는 블록 바깥에서 사용할 수 있다. */
+			
+			
 			if(true){
 				//HTML 문서 전역 변수 선언
 				var x2=10;
@@ -29,8 +31,9 @@
 			/* let으로 선언한 변수는 해당 블록 안에서만 사용할 수 있다. */
 			if( true ){
 				let x3 = 10;
+				console.log("x3:" + x3);
 			}
-			/* console.log("x3:" + x3); */
+			//console.log("x3:" + x3); //에러 
 	
 			
 			
