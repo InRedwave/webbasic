@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<script>
+			//Infinity ---------------------------------------
+			var var1 = 3/0;
+			console.log(var1);
+			console.log(var1 == Infinity);
+			/* Infinity도 비교 대상이 될 수 있다. 
+			java는 예외, js 는 예외 아님.*/
+			
+			//Infinity 는 if문에서 true 값.
+			if(var1) {
+				console.log("if문 true.");				
+			} else {
+				console.log("if문 false.");				
+			}
+			
+			//NaN (Not a Number) -----------------------------
+			//NaN은 직접 비교가 불가능하다.
+			var var3 = 100 - "car";
+			console.log(var3);
+			console.log(var3 === NaN);
+			
+			//가능하지만 사용 x
+			//var var5 = NaN;
+			
+			//대신 isNaN 사용 (숫자인지 아닌지 검사)
+			//부정의 의미가 되어서 false 출력.
+			if(var3) {
+				console.log("if문 true.");				
+			} else {
+				console.log("if문 false.");				
+			}
+			
+			
+			
+			var var4 = 100 - "car";
+			if(isNaN(var4)){
+				console.log("숫자가 아닙니다.");
+			} else {
+				console.log("숫자입니다.");
+			}
+			
+			if(var4) {
+				console.log("if문 true.");				
+			} else {
+				console.log("if문 false.");				
+			}
+			
+			
+			//undefined -------------------------------------
+			var var5 = 3 ;
+			console.log(var5);
+			console.log(var5 == undefined);
+			
+			
+			//parseInt(), parseFloat()-----------------------
+			//문자열 결합 연산.
+			var var5 = parseInt("10.5") + 5; //소수 이하 버림.
+			var var6 = parseFloat("10.5") + 5;
+			console.log(var5, var6);
+			
+			//eval()-----------------------------------------
+			
+			function fun1(){
+				console.log("fun1() 실행");
+				return "success";
+			}
+			var result = fun1();
+			console.log(result);
+			
+			//문자열 안의 내용을 javascript 코드로 해석을 한다.
+			//문자열을 javascript로 번역하는 함수.
+			var result2 = eval("fun1()");
+			console.log(result2);
+						
+			
+			//나 누구게? 맞춰봐 무섭지??롱?? 메롱
+			
+		</script>
+		
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<script>
+			function fun1() {
+				//window의 console 속성
+				console.log("hello");
+				//window가 가진 속성이므로 실제로 아래처럼 적어야 한다.
+				//window는 기본적으로 생략이 가능하다.
+				window.console.log("hello");
+			}
+			function fun2(){
+				//window.innerWidth, innerHeight
+				console.log(window.innerWidth, innerHeight);
+				console.log(innerWidth, window.innerHeight);
+			}
+			function fun3(){
+				//windowd의 다이얼로그와 관련된 메소드
+				
+				//단순한 메시지를 보여주는 다이얼로그
+				//window.alert("메시지입니다.");
+				//alert("메시지입니다.");
+				
+				//확인 여부를 물어보는 다이얼로그 (window는 생략 가능하다)
+				/* 
+				var result = window.confirm("주문을 정말 하시겠습니까");
+				if(result){
+					console.log("주문 할게요");
+				} else {
+					console.log("주문 취소 할게요");
+				}
+				 
+				//입력을 받는 다이얼로그
+				var result = window.prompt("필요한 정보를 입력하세요", "아이디");
+				//prompt("dasd");
+				//매개변수 하나만 입력해도 됨.
+				//null은 false 로 받는다.
+				 if(result){
+					console.log(result + "로 처리합니다.");
+				} else {
+					console.log("필요한 정보를 입력하지 않았습니다.");
+				}				
+				*/
+				
+				//사용자 정의 다이얼로그 -> 안에 들어가는 내용이 결정되어 있지 않다. (=팝업)
+				//별도의 작은 창에서 URL을 보여준다.
+				window.open("https://www.w3schools.com/jsref/met_win_prompt.asp", "", "top=100, left=100, width=350, height=500");
+			
+				//새 탭에서 URL을 보여줌.
+				//window.open("https://www.w3schools.com", "_blank");
+				
+				
+				//현재 탭에서 URL을 보여줌.
+				//window.open("https://www.w3schools.com", "_self");
+				
+			}	
+				
+				
+				
+		</script>
+	</head>
+	<body>
+		<div class = "card" >
+			<div class = "card-header">Window Porperties</div>
+			<div class = "card-body">
+				<button onclick = "fun1()" class = "btn btn-info btn-sm">console 속성</button>
+				<button onclick = "fun2()" class = "btn btn-info btn-sm">innerWidth/innerHeight 속성</button>
+			</div>
+		</div>
+		<div class = "card mt-3" >
+			<div class = "card-header">Window Methods</div>
+			<div class = "card-body">
+				<button onclick = "fun3()" class = "btn btn-info btn-sm">다이얼로그 관련 메소드</button>
+			</div>
+			
+			
+		</div>
+		
+	</body>
+</html>

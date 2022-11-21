@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		
+	</head>
+	<body>
+		<script>
+			let ssn = "121256-1234567";
+			console.log(ssn.length);
+			//index이므로 0부터.
+			console.log(ssn.charAt(7));
+			
+			console.log(ssn.substring(0,6)); //start, end
+			console.log(ssn.substring(7));
+			
+			
+			console.log(ssn.substr(2, 2)); // start, length
+			
+			let ssnArray = ssn.split("-");
+			console.log(ssnArray);
+			console.log(ssnArray, ssnArray[0], ssnArray[1]);
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

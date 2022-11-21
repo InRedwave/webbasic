@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+		
+		//자바의 main, sub thread 처럼 생각하면 된다.
+		var timerId;
+		
+			function fun1() {
+				
+				/* timerId = window.setInterval(function (){
+					console.log("서버로");
+					console.log("새로운 데이터1을 요청합니다.");
+				}, 1000); */
+				
+				//함수를 밖에서 작성 후 지정.
+				/* timerId = setInterval(callback, 1000); */
+				
+				//3. function(){} 대신에 () => {}
+				timerId = setInterval(()=>{
+					console.log("서버로");
+					console.log("새로운 데이터 3을 요청합니다.");
+				}, 1000);
+			}
+			
+			
+			function callback() {
+					console.log("서버로");
+					console.log("새로운 데이터2를 요청합니다.");
+			}
+			
+			function fun2() {
+				clearInterval(timerId);
+			}
+			
+			
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		 <div class = "card" >
+			<div class = "card-header">callback</div>
+			<div class = "card-body">
+				<button onclick = "fun1()" class = "btn btn-info btn-sm">주어진 시간 간격으로 반복 실행</button>
+				<button onclick = "fun2()" class = "btn btn-info btn-sm">반복 실행 중지</button>
+			</div>
+		</div>
+		
+	</body>
+</html>
