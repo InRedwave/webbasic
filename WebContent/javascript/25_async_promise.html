@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<script>
+			//Promise 생성하고 리턴하는 함수
+			
+			function work() {
+				let promise = new Promise(function(resolve, reject) {
+					//실제 작업 내용을 정의(시간을 필요로 하는 작업)
+					let result = false;
+					if(result) {
+						resolve("success");
+					} else {
+						reject("fail");
+					}
+				});
+				return promise;
+			}
+			 
+			//button의 click 이벤트가 발생했을 때 실행하는 함수
+			//work 끝날떄까지 기다리고 있을 수 없기 때문에.
+			function fun1() {
+				console.log("이벤트 처리 시작");
+				/* 
+				//Promise 실행 방법 1
+				work().then(
+					//work 에서 resolve 실행하면 실행.
+					function(value) {console.log(value + ": 네트워크 통신 완료."); }, 
+					//work 에서 reject 실행하면 실행.
+					function(value) {console.log(value + ": 네트워크 통신 실패");}
+				);
+				 */
+				//Promise 실행 방법 2
+				work()
+					.then(function(value) {console.log(value + ": 네트워크 통신 완료."); })
+					.catch(function(value) {console.log(value + ": 네트워크 통신 완료."); })
+				 	//마지막에 항상 실행된다.
+					.finally(function(value) {console.log("마무리"); });
+				
+				 
+				
+				
+				console.log("이벤트 처리 종료");
+			}
+			
+			
+					
+			
+		</script>
+		
+		
+		
+	</head>
+	<body>
+		<div class = "card" >
+			<div class = "card-header">promise</div>
+			<div class = "card-body">
+				<button onclick = "fun1()" class = "btn btn-info btn-sm">Promise 실행</button>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
