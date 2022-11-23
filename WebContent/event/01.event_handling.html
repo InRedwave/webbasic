@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+	<script>
+		//Event handler : Event 발생했을 때 실행해서 처리하는 함수.
+		//Event 객체는 바로 사용 가능하다.
+		function fun1() {
+			console.log("실행")
+			console.log(event);
+			
+			//Event가 발생된 객체 (소스)
+			console.log(event.target);
+			//발생한 event 이름 : type
+			console.log(event.type);
+		}
+		
+		function fun2(){
+			console.log(event.type);
+			if(event.type === "mouseenter") {
+				//$(event.target).css("background-color", "#ff0000")
+				$(event.target).addClass("bg-danger");
+				//$(event.target).removeClass("bg-success");
+				 
+			} else if(event.type === "mouseleave") {
+				//$(event.target).addClass("bg-success") 
+				//$(event.target).css("background-color", "green")
+				$(event.target).removeClass("bg-danger")
+			}
+		}
+		var isValidatedLoginData = true;
+		
+		
+		
+		function checkuserId() {
+			var userId = $("#userId").val();
+			console.log(userId);
+			// 유효성 검사.
+			
+			
+			
+			
+			//isValidatedLoginData = false;
+		}
+		
+	
+		
+		
+		function checkuserPass() {
+			var userPass = $("#userPass").val();
+			console.log(userPass);
+			// 유효성 검사.
+			
+			
+			
+			
+			//isValidatedLoginData = false;
+		}
+		
+		//검사 결과값에 따라서 button method 역할 부여
+		
+		function login(){
+			if(isValidatedLoginData) {
+				var loginForm = document.querySelector("#LoginForm");
+				//Javascript form 제출 기능 호출
+				//jquery 는 submit 기능이 없다.
+				loginForm.submit();
+				
+				
+			}
+			
+		}
+		
+	</script>
+
+
+
+</head>
+<body>
+
+	<div class="card">
+		<div class="card-header">Event Handling</div>
+
+
+		<div class="card-body">
+
+
+			<div class = "border" 
+				style = "width : 100px; height: 100px;"
+				onclick = "fun1()"
+				onmouseenter ="fun2()"
+				onmouseleave ="fun2()">
+				
+			</div>
+			<hr/>
+			
+			<form id = "LoginForm" action="#">
+				아이디 : <input type ="text" id ="userId" name = "userId" onfocusout ="checkuserId()" /> <br/>
+				비밀번호 : <input type ="text" id ="userPass" name = "userPass" onfocusout ="checkuserPass()" /> <br/>
+				<!--form 내 button은 submit 효과-->
+				<button type ="button" onclick = "login()">로그인</button>
+			</form>
+
+
+
+
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>

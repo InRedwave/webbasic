@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<script>
+			//body 해석(렌더링) 전에 실행해서 없다고 나오게 됨.
+			//var div1 = $("#div1");
+			//console.log(div1);
+		
+			//-----ready Event가 발생했을 떄 자동 실행 --------
+			//1. document Element 를 jquery 객체로 변경함.
+			//2. 렌더링 끝나면 ready 메소드 호출
+			//3. 발생하면 function() 함수 실행.
+			
+			//작성방법 1
+			$(document).ready(function(){
+				var div1 = $("#div1");	
+				console.log(div1);
+			});
+			 
+			//작성방법 2
+			$(function() {
+				var div1 = $("#div1");	
+				console.log(div1);
+			});
+			
+			
+			
+			//-----Load Event가 발생했을 떄 콜백 --------
+			function init() {
+				console.log("init()실행");
+				
+			}
+			
+			
+			
+			function fun1() {
+				var div1 = $("#div1");
+				console.log(div1);
+			}
+			
+			
+			
+			
+		</script>
+		
+	</head>
+<body onload="init()">
+	<div class="card">
+		<div class="card-header">Ready Event</div>
+		
+		<div class="card-body">
+			<button onclick = "fun1()" class = "btn btn-info btn-small">버튼 1</button>			
+			<div id="div1">	</div>
+			<img src ="../images/photo1.jpg" width ="100px" height ="100"/>
+			<img src ="../images/photo2.jpg" width ="100px" height ="100"/>
+			<img src ="../images/photo3.jpg" width ="100px" height ="100"/>
+			
+			
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

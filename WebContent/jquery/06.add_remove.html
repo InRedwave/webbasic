@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+		
+		<script>
+			function addImg(){
+				var imgsDiv = document.querySelector("#imgs");
+				//변경
+				//imgsDiv.innerHTML = '<img src =  "../images/photo1.jpg" width = "200px">';
+				//append
+				//imgsDiv.innerHTML += '<img src =  "../images/photo1.jpg" width = "200px">';
+				
+				var imgsDiv = $("#imgs");
+				//html 매개변수 받을 수 있으므로.
+				imgsDiv.append('<img src =  "../images/photo1.jpg" width = "200px">');
+			}
+			
+			function removeImg(){
+			/* 	var img = $("imgs");
+				img.remove(); */
+				
+				var imgsDiv = $("#imgs");
+				imgsDiv.empty();
+				
+			}
+			
+			
+			
+		</script>
+		
+	</head>
+<body>
+	<div class="card">
+		<div class="card-header">add</div>
+
+
+		<div class="card-body">
+		
+		<button onclick = "addImg()" class = "btn btn-info btn-small">그림 추가</button>
+		<button onclick = "removeImg()" class = "btn btn-info btn-small">그림 삭제</button>
+		<hr/>
+
+		<div id = "imgs">
+		</div>
+	</div>
+	</div>
+
+</body>
+</html>
